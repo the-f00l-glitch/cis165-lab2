@@ -1,0 +1,6 @@
+# AI Reflection — Lab 2
+
+* **Tools Used:** I used AI (Gemini) as a learning assistant to verify my C++ code logic, double-check standard variable declarations, and format my repository documentation to meet all assignment rubrics.
+* **One Decision:** I initially considered using `float` for `mpg.cpp`. I asked the AI: *"Should I use float or double for calculating miles per gallon in C++?"* The AI explained that while `float` uses 32 bits, `double` uses 64 bits and is the standard default for decimal floating-point arithmetic in C++, preventing precision loss. I accepted this suggestion and declared `miles`, `gallons`, and `mpg` as `double`.
+* **Verification:** I manually calculated $312.0 / 16.0 = 19.5$ using a handheld calculator prior to execution. When compiling with `g++ -std=c++17 -Wall -Wextra mpg.cpp -o mpg`, the compiler generated zero warnings, and the output matched my manual calculation exactly (19.5 MPG).
+* **Learning:** I can now clearly explain the danger of integer truncation during division in C++ and how to choose floating-point data types (`double`) to preserve decimals. One concept I still need to practice is formatting floating-point output precision using `<iomanip>` stream manipulators like `std::setprecision`.
